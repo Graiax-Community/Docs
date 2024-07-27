@@ -27,10 +27,9 @@ Twilight 的使用方法一致在跟随 Ariadne 的版本迭代进行改进。
 
 以下演示 Twilight 的两种创建方法：
 
-::::code-group
-:::code-group-item from_command
+:::code-group
 
-```python
+```python [from_command]
 from graia.ariadne.message.parser.twilight import Twilight
 
 
@@ -44,10 +43,7 @@ async def test(app: Ariadne, group: Group):
     pass
 ```
 
-:::
-:::code-group-item Match
-
-```python
+```python [Match]
 from graia.ariadne.message.element import At
 from graia.ariadne.message.parser.twilight import (
     FullMatch,
@@ -76,7 +72,6 @@ async def test(app: Ariadne, group: Group):
 ```
 
 :::
-::::
 
 :::warning
 上述代码中的匹配参数是强行创造需求，无实际意义。
@@ -301,17 +296,13 @@ ElementMatch 可以用来匹配各种在消息链中可以与文字共存的消�
 
 例如，有一个 Twilight（以下两种创建 Twilight 的方式等价）：
 
-::::code-group
-:::code-group-item from_command 方式
+:::code-group
 
-```python
+```python [from_command 方式]
 Twilight.from_command("歌词 {lyrics} 好耶")
 ```
 
-:::
-:::code-group-item Match 方式
-
-```python
+```python [Match 方式]
 Twilight(
     FullMatch("歌词").space(SpacePolicy.FORCE),
     "lyrics" @ ParamMatch().space(SpacePolicy.FORCE),
@@ -319,7 +310,7 @@ Twilight(
 )
 ```
 
-::::
+:::
 
 那么，这个 Twilight 可以成功匹配到下面这几种字符串：
 
@@ -405,10 +396,9 @@ Twilight 重载了这个运算符使其执行了 `Match.param()` 的这个方法
 
 这里我们就不多说废话，老规矩，直接上实例:
 
-::::code-group
-:::code-group-item MatchResult
+:::code-group
 
-```python
+```python [MatchResult]
 from graia.ariadne.message.parser.twilight import (
     FullMatch,
     ParamMatch,
@@ -456,10 +446,7 @@ async def lyric_xxx(app: Ariadne, group: Group, lyrics1: RegexResult, lyrics2: R
     print(lyrics2.result.__repr__)
 ```
 
-:::
-:::code-group-item Sparkle
-
-```python
+```python [Sparkle]
 ...
 # 本方法不受推荐，也不属于 MatchResult，放在这里只是因为这样也可以获得匹配结果
 # 请不要问此处的 Sparkle 是什么，他是 Twilight 的内部类，用于暴露内部的 MatchResult
@@ -521,7 +508,6 @@ async def lyric_xxx(app: Ariadne, group: Group, sparkle: Sparkle):
 ```
 
 :::
-::::
 
 `MatchResult` 除了他本身外还有三种变体，分别是 `RegexResult`、`ArgResult`、`ElementResult`，
 这三个分别对应了 `RegexMatch` 及从其继承出来的其他几种 Match（不含 **ElementMatch**），

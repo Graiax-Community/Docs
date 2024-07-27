@@ -1,7 +1,7 @@
 import MarkdownIt from 'markdown-it'
 import footnote_plugin from 'markdown-it-footnote'
 
-import { containerPlugin } from './cunstomContainrt'
+import { containerPlugin } from './container'
 import { mermaidPlugin } from './mermaid'
 import { tasklistPlugin } from './tasklist-mod'
 

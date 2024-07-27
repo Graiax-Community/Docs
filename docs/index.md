@@ -7,6 +7,9 @@ hero:
   name: Graia 社区文档
   text: GraiaX Docs
   tagline: Documentation by community of Graia Project
+  image:
+    light: /logo.svg
+    dark: /logo-dark.svg
 
   actions:
     - theme: brand
@@ -45,7 +48,6 @@ Cloudflare: <https://docs.graiax.cn/>
 .home {
   display: flex;
   justify-content: center;
-  padding: 0 24px;
 
   .container {
     width: 100%;
@@ -54,18 +56,6 @@ Cloudflare: <https://docs.graiax.cn/>
 
   .container > div {
     margin: 16px 0;
-  }
-}
-
-@media (min-width: 640px) {
-  .home {
-    padding: 0 48px;
-  }
-}
-
-@media (min-width: 960px) {
-  .home {
-    padding: 0 64px;
   }
 }
 </style>

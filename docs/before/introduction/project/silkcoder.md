@@ -18,29 +18,21 @@ A fxxxing simple silkv3 converter.
 
 ## 安装
 
-::::code-group
-:::code-group-item PDM
+:::code-group
 
-```sh
+```sh [PDM]
 pdm add graiax-silkcoder
 ```
 
-:::
-:::code-group-item Poetry
-
-```sh
+```sh [Poetry]
 poetry add graiax-silkcoder
 ```
 
-:::
-:::code-group-item PIP
-
-```sh
+```sh [PIP]
 pip install graiax-silkcoder
 ```
 
 :::
-::::
 
 ## 安装后的配置
 
@@ -100,31 +92,23 @@ wave.open("你要测试的wav.wav")
   - 优点：小（bin 只有 1Mb），支持 mp3, flac, ogg/opus 等音频
   - 缺点：不支持 aac 音频（一般体现为以 `.m4a` 为后缀的文件）
 
-::::code-group
-:::code-group-item 只需要本体
+:::code-group
 
-```sh
+```sh [只需要本体]
 # 如果需要转换非 wav 音频，则需要自行安装与配置 FFmpeg
 graiax-silkcoder
 ```
 
-:::
-:::code-group-item 需要 ffmpeg (imageio-ffmpeg)
-
-```sh
+```sh [需要 ffmpeg (imageio-ffmpeg)]
 # 通过下面的方式使用 imageio-ffmpeg 中的 FFmpeg
 graiax-silkcoder[ffmpeg]
 ```
 
-:::
-:::code-group-item 需要 libsndfile
-
-```sh
+```sh [需要 libsndfile]
 graiax-silkcoder[libsndfile]
 ```
 
 :::
-::::
 
 :::warning 警告
 如果在 ARM 平台的 Windows 系统下安装时出现

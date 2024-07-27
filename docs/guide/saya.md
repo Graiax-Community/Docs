@@ -64,22 +64,17 @@ Nonebot 就是一个比较典型的插件导入式框架（通过导入不同的
 
 :::
 
-::::code-group
-:::code-group-item poetry
+:::code-group
 
-```sh
+```sh [Poetry]
 poetry add graia-saya
 ```
 
-:::
-:::code-group-item pip
-
-```sh
+```sh [PIP]
 pip install graia-saya
 ```
 
 :::
-::::
 
 ## 创建一个基础框架
 
@@ -144,10 +139,10 @@ with saya.module_context():
 在这段代码中，我们在上下文中使用 `saya.require` 导入了一个名为 `modules.ero` 的模组。
 
 而事实上模组的形式可以是如下两种：
-::::code-group
-:::code-group-item 单文件模组
 
-```sh
+:::code-group
+
+```sh [单文件模组]
 EroEroBot
 ├─ main.py
 ├─ pyproject.toml
@@ -155,10 +150,7 @@ EroEroBot
    └─ ero.py
 ```
 
-:::
-:::code-group-item 文件夹模组
-
-```sh
+```sh [文件夹模组]
 EroEroBot
 ├─ main.py
 ├─ pyproject.toml
@@ -168,7 +160,7 @@ EroEroBot
       └─ util.py
 ```
 
-::::
+:::
 
 :::interlink EroEroBot
 本章完整示例可在 [EroEroBot/main-saya.py](https://github.com/GraiaCommunity/EroEroBot/blob/master/main-saya.py) 找到。  

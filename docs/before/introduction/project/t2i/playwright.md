@@ -16,29 +16,21 @@ GraiaX TextToImage (Playwright) 是一个基于 [GraiaX Playwright](https://gith
 
 ## 安装
 
-::::code-group
-:::code-group-item PDM
+:::code-group
 
-```sh
+```sh [PDM]
 pdm add graiax-text2img-playwright
 ```
 
-:::
-:::code-group-item Poetry
-
-```sh
+```sh [Poetry]
 poetry add graiax-text2img-playwright
 ```
 
-:::
-:::code-group-item PIP
-
-```sh
+```sh [PIP]
 pip install graiax-text2img-playwright
 ```
 
 :::
-::::
 
 ## 开始使用
 

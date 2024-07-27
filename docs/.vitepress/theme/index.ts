@@ -1,10 +1,9 @@
+// https://vitepress.dev/guide/custom-theme
 import type { Theme } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import Layout from './Layout.vue'
 
-import { CodeGroup } from '../mdEnhance/components/CodeGroup'
-import CodeGroupItem from '../mdEnhance/components/CodeGroupItem.vue'
 import Mermaid from '../mdEnhance/components/Mermaid'
 
 import ChatFile from '../components/FakeQQ/ChatFile.vue'
@@ -24,21 +23,13 @@ import ProjectInfo from '../components/ProjectInfo.vue'
 import RubyCurtain from '../components/RubyCurtain.vue'
 import VolumeBar from '../components/VolumeBar.vue'
 
+import { css } from './fonts/HarmonyOS_Sans_SC.ttf?subsets'
 import '../styles/index.scss'
 
-const theme: Theme = {
-  ...DefaultTheme,
-
-  // root component to wrap each page
+export default {
+  extends: DefaultTheme,
   Layout,
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   enhanceApp({ app, router, siteData }) {
-    DefaultTheme.enhanceApp({ app, router, siteData })
-
-    // app is the Vue 3 app instance from `createApp()`.
-    // router is VitePress' custom router. `siteData` is
-    // a `ref` of current site-level metadata.
     app.component('ChatFile', ChatFile)
     app.component('ChatImg', ChatImg)
     app.component('ChatMsg', ChatMsg)
@@ -56,10 +47,6 @@ const theme: Theme = {
     app.component('RubyCurtain', RubyCurtain)
     app.component('VolumeBar', VolumeBar)
 
-    app.component('CodeGroup', CodeGroup)
-    app.component('CodeGroupItem', CodeGroupItem)
     app.component('Mermaid', Mermaid)
   }
-}
-
-export default theme
+} satisfies Theme

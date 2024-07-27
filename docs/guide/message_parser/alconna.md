@@ -36,32 +36,24 @@
 
 :::
 
-:::: code-group
-::: code-group-item pdm
+:::code-group
 
-```bash
+```bash [PDM]
 pdm add arclet-alconna-graia>=0.14.0, arclet-alconna-ariadne>=0.14.0
 pdm add graiax-shortcut
 ```
 
-:::
-::: code-group-item poetry
-
-```bash
+```bash [Poetry]
 poetry add arclet-alconna-graia>=0.14.0, arclet-alconna-ariadne>=0.14.0
 poetry add graiax-shortcut
 ```
 
-:::
-::: code-group-item pip
-
-```bash
+```bash [PIP]
 pip install arclet-alconna-graia>=0.14.0, arclet-alconna-ariadne>=0.14.0
 pip install graiax-shortcut
 ```
 
 :::
-::::
 
 ## [缭乱！外星大魔王](https://zh.moegirl.org.cn/%E7%BC%AD%E4%B9%B1!Victory_Road)
 
@@ -196,10 +188,9 @@ async def ero_ascii2d(
 
 :::
 
-:::: code-group
-::: code-group-item typical
+:::code-group
 
-```python{4,10}
+```python{4,10} [typical]
 from arclet.alconna import Args
 from arclet.alconna.graia import AlconnaDispatcher
 
@@ -216,10 +207,7 @@ async def test(app: Ariadne, group: Group):
     pass
 ```
 
-:::
-::: code-group-item String
-
-```python{4,10}
+```python{4,10} [String]
 from arclet.alconna.graia import AlconnaDispatcher
 from arclet.alconna.tools import AlconnaString
 
@@ -236,10 +224,7 @@ async def test(app: Ariadne, group: Group):
     pass
 ```
 
-:::
-::: code-group-item Format
-
-```python{4,10}
+```python{4,10} [Format]
 from arclet.alconna.graia import AlconnaDispatcher
 from arclet.alconna.tools import AlconnaFormat
 
@@ -256,10 +241,7 @@ async def test(app: Ariadne, group: Group):
     pass
 ```
 
-:::
-::: code-group-item Decorate
-
-```python{4,7-10,16}
+```python{4,7-10,16} [Decorate]
 from arclet.alconna.graia import AlconnaDispatcher
 from arclet.alconna.tools import AlconnaDecorate
 
@@ -282,10 +264,7 @@ async def test(app: Ariadne, group: Group):
     pass
 ```
 
-:::
-::: code-group-item Fire
-
-```python{5-8,11,17}
+```python{5-8,11,17} [Fire]
 from arclet.alconna import.tools AlconnaFire
 from arclet.alconna.graia import AlconnaDispatcher
 
@@ -310,7 +289,6 @@ async def test(app: Ariadne, group: Group):
 ```
 
 :::
-::::
 
 ### 代码解析
 

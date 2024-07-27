@@ -42,21 +42,17 @@
 
 :::
 
-::::code-group
-:::code-group-item poetry
+:::code-group
 
-```sh
+```sh [Poetry]
 poetry add graia-scheduler
 ```
 
-:::
-:::code-group-item pip
-
-```sh
+```sh [PIP]
 pip install graia-scheduler
 ```
 
-::::
+:::
 
 ## 初始化 Graia Scheduler
 

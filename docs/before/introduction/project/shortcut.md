@@ -80,24 +80,17 @@ async def setu(app: Ariadne, group: Group, message: MessageChain):
 但前者已停止更新，请尽量从 `graiax.shortcut.saya` 导入 **Saya Util**。
 :::
 
-::::code-group
-:::code-group-item PDM
+:::code-group
 
-```sh
+```sh [PDM]
 pdm add graiax-shortcut
 ```
 
-:::
-:::code-group-item Poetry
-
-```sh
+```sh [Poetry]
 poetry add graiax-shortcut
 ```
 
-:::
-:::code-group-item PIP
-
-```sh
+```sh [PIP]
 pip install graiax-shortcut
 ```
 

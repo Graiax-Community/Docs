@@ -43,28 +43,21 @@
 
 ## 2. 安装 `saucenao-api`
 
-::::code-group
-:::code-group-item pdm
+:::code-group
 
-```sh
+```sh [pdm]
 pdm add saucenao-api
 ```
 
-:::
-:::code-group-item poetry
-
-```sh
+```sh [poetry]
 poetry add saucenao-api
 ```
 
-:::
-:::code-group-item pip
-
-```sh
+```sh [pip]
 pip install saucenao-api
 ```
 
-::::
+:::
 
 ## 3. 在插件文件夹里创建一个新的插件并且粘贴一下代码
 
@@ -74,10 +67,9 @@ pip install saucenao-api
 ~~听我说👂👂👂谢谢你🙏🙏🙏因为有你👉👉👉温暖了四季🌈🌈🌈~~
 :::
 
-::::code-group
-:::code-group-item Twilight
+:::code-group
 
-```python
+```python [Twilight]
 from graia.ariadne.app import Ariadne
 from graia.ariadne.event.message import GroupMessage
 from graia.ariadne.message.chain import MessageChain
@@ -139,10 +131,7 @@ async def saucenao(app: Ariadne, group: Group, member: Member, img: ElementResul
         await app.send_message(group, MessageChain(Forward(nodeList=fwd_nodeList)))
 ```
 
-:::
-:::code-group-item Alconna
-
-```python
+```python [Alconna]
 from graia.ariadne.app import Ariadne
 from graia.ariadne.message.element import *
 from graia.ariadne.model import Group
@@ -205,7 +194,6 @@ async def saucenao(app: Ariadne, group: Group, source: Source, content: Match[st
 ```
 
 :::
-::::
 
 这样，你的搜图机器人就做好力
 

@@ -131,7 +131,7 @@ Conda 具备管理多 Python 版本，安装非 pip 包的功能，正常来说�
 
 鉴于 QQ Bot 社区的特殊性，我们建议你遵循以下步骤：
 
-1. 查看 [官方文档](https://graia.cn/ariadne)
+1. 查看 [官方文档](https://graia.cn/)
 2. 如果你发现官方文档没有提及……
    1. 如果模块名以 `graia` 或 `graiax` 开头，立刻到 [交流群](https://jq.qq.com/?_wv=1027&k=VXp6plBD) 里问
    2. 否则，去翻对应的文档（或者 `Stack Overflow` 之类的地方，同时善用搜索引擎 <curtain>不过请远离 CSDN</curtain>）

@@ -111,22 +111,17 @@ logger.opt(raw=True).log("测试")
 所以这里只能单独安装了
 :::
 
-::::code-group
-:::code-group-item poetry
+:::code-group
 
-```sh
+```sh [Poetry]
 poetry add prompt-toolkit
 ```
 
-:::
-:::code-group-item pip
-
-```sh
+```sh [PIP]
 pip install prompt-toolkit
 ```
 
 :::
-::::
 
 ### 在后台发送消息吧~
 

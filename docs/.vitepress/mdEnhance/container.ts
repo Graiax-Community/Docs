@@ -37,8 +37,6 @@ import container from 'markdown-it-container'
 export const containerPlugin = (md: MarkdownIt) => {
   md.use(...createContainer('interlink', '相关链接', md))
     .use(...createContainer('tsukkomi', '吐槽', md))
-    .use(...createContainer('code-group', 'code-group', md))
-    .use(...createContainer('code-group-item', 'code-group-item', md))
 }
 
 type ContainerArgs = [typeof container, string, { render: RenderRule }]
@@ -54,23 +52,9 @@ function createContainer(klass: string, defaultTitle: string, md: MarkdownIt): C
 
         if (token.nesting === 1) {
           const title = md.renderInline(info || defaultTitle)
-          switch (klass) {
-            case 'code-group':
-              return '<CodeGroup>\n'
-            case 'code-group-item':
-              return `<CodeGroupItem title="${info}">\n`
-            default:
-              return `<div class="${klass} custom-block"><p class="custom-block-title">${title}</p>\n`
-          }
+          return `<div class="${klass} custom-block"><p class="custom-block-title">${title}</p>\n`
         } else {
-          switch (klass) {
-            case 'code-group':
-              return '</CodeGroup>\n'
-            case 'code-group-item':
-              return '</CodeGroupItem>\n'
-            default:
-              return '</div>\n'
-          }
+          return '</div>\n'
         }
       }
     }

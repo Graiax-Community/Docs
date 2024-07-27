@@ -35,37 +35,28 @@ Python 也有如 “PyPy” 之类的其他解释器，所以，Java 也有很�
 
 如果你怕麻烦，那我们先从简单的安装方法说起，以下是各系统安装 OpenJDK 的方法：
 
-::::code-group
-:::code-group-item Windows
+:::code-group
 
-```powershell
+```powershell [Windows]
 # 请注意，只有 Windows 10 1709 （非 LTS 版）及以上或 Windows 11 才自带 winget 命令
 # 事实上，截至目前，winget 的默认仓库中有足足 7 个来自不同厂商的 OpenJDK
 # 这里就用 Windows 发行商 Microsoft 发行的 JDK 举例
 winget install Microsoft.OpenJDK.17
+
+# 请注意，只有 Windows 10 1709（不含 LTSB、LTSC）及以上或 Windows 11 才自带 winget 命令。
+
+# Windows XP / Vista 已不受支持，请使用现代化的操作系统，Windows 7 / 8 /
+# 10（1709 之前的版本或长期支持版本）请使用下一节提到的来自不同厂商的 OpenJDK 安装包。
 ```
 
-:::tip
-请注意，只有 Windows 10 1709（不含 LTSB、LTSC）及以上或 Windows 11 才自带 winget 命令。
-
-Windows XP / Vista 已不受支持，请使用现代化的操作系统，Windows 7 / 8 /
-10（1709 之前的版本或长期支持版本）请使用下一节提到的来自不同厂商的 OpenJDK 安装包。
-:::
-
-:::
-:::code-group-item DEB系
-
-```sh
+```sh [DEB系]
 # 适用于 Ubuntu / Debian 等系统
 # 非 root 的情况下记得最前面加上 sudo
 apt update
 apt install openjdk-17-jre
 ```
 
-:::
-:::code-group-item RPM系
-
-```sh
+```sh [RPM系]
 # 非 root 的情况下记得最前面加上 sudo
 
 # 适用于 CentOS 8 / Rocky Linux 8
@@ -74,18 +65,11 @@ dnf install java-latest-openjdk
 yum install java-latest-openjdk
 ```
 
-:::
-
-:::code-group-item Arch系
-
-```powershell
+```powershell [Arch系]
 pacman -S jdk-openjdk
 ```
 
-:::
-:::code-group-item macOS
-
-```fish
+```fish [macOS]
 # 此处假设你提前安装了 brew cask
 # 没有的话就先 "brew install brew-cask-completion"
 # 事实上，brew 也能够安装足足 4 个厂商的 JDK
@@ -93,17 +77,13 @@ pacman -S jdk-openjdk
 brew cask install java
 ```
 
-:::
-:::code-group-item Termux
-
-```sh
+```sh [Termux]
 # 不太建议在 termux 运行 MCL，因为可能会出现各种各样的 bug 和问题（比如功能突然失效，然后下一次触发时又莫名其妙的恢复了，或者触发时出现错误，可以用 Proot 安装一个原生 Linux 系统，但是触发时包含的中文字符可能会乱码）
 # 可以看看后面的 MiraiAndroid，占用会低一点
 pkg install openjdk-17
 ```
 
 :::
-::::
 
 ### 常见的 OpenJDK 发行版
 

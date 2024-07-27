@@ -82,10 +82,9 @@ Image(path="./GraiaX/EroEroBot/eropic.jpg")
 现在的最新版本为 <img src="https://img.shields.io/pypi/v/graiax-silkcoder?color=2970b6&amp;style=flat-square" alt="PyPI版本" style="display: inline-block; vertical-align: text-bottom">
 :::
 
-::::code-group
-:::code-group-item poetry
+:::code-group
 
-```sh
+```sh [Poetry]
 # 普通安装
 poetry add graiax-silkcoder
 # 假设你的环境中没有安装 ffmpeg 但又需要 wav 以外的音频格式转换
@@ -94,10 +93,7 @@ poetry add graiax-silkcoder[ffmpeg]
 poetry add graiax-silkcoder[libsndfile]
 ```
 
-:::
-:::code-group-item pip
-
-```sh
+```sh [PIP]
 # 普通安装
 pip install graiax-silkcoder
 # 假设你的环境中没有安装 ffmpeg 但又需要 wav 以外的音频格式转换
@@ -107,34 +103,26 @@ pip install graiax-silkcoder[libsndfile]
 ```
 
 :::
-::::
 
 快速简单地创建一个 Voice 对象：
 
-::::code-group
-:::code-group-item 0.2.6 +
+:::code-group
 
-```python
+```python [0.2.6 +]
 from graiax import silkcoder
 
 audio_bytes = await silkcoder.async_encode("GraiaX/EroEroBot/hentai.m4a", ios_adaptive=True)
 Voice(data_bytes=audio_bytes)
 ```
 
-:::
-:::code-group-item 0.2.0 - 0.2.5
-
-```python
+```python [0.2.0 - 0.2.5]
 from graiax import silkcoder
 
 audio_bytes = await silkcoder.async_encode("GraiaX/EroEroBot/hentai.m4a")
 Voice(data_bytes=audio_bytes)
 ```
 
-:::
-:::code-group-item 0.1.x
-
-```python
+```python [0.1.x]
 from graiax import silkcoder
 
 audio_bytes = await silkcoder.encode("GraiaX/EroEroBot/hentai.m4a")
@@ -142,7 +130,6 @@ Voice(data_bytes=audio_bytes)
 ```
 
 :::
-::::
 
 :::tip
 0.2.6 + 新增的 `ios_adaptive` 参数，是为了让音频能够被 iOS 客户端的用户听到。  

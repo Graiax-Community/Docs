@@ -1,9 +1,17 @@
 import { defineConfig } from 'vitepress'
 
-import { before, guide, appendix } from './sidebar'
-
 import mdEnhance from './mdEnhance/index'
+import { before, guide, appendix } from './sidebar'
+function nav() {
+  return [
+    { text: '开始之前', link: '/before/', activeMatch: '/before/' },
+    { text: '实战演练', link: '/guide/', activeMatch: '/guide/' },
+    { text: '附录', link: '/appendix/credit', activeMatch: '/appendix/' },
+    { text: 'Graia 官方文档', link: 'https://graia.cn/' }
+  ]
+}
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
 
@@ -15,10 +23,11 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
-    ['script', { src: 'https://cdn.bootcdn.net/ajax/libs/mermaid/10.3.0/mermaid.min.js' }]
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js' }]
   ],
 
   themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
     i18nRouting: true,
     logo: '/logo.svg',
     nav: nav(),
@@ -52,9 +61,16 @@ export default defineConfig({
     returnToTopLabel: '回到顶部 ▲'
   },
 
+  markdown: {
+    theme: 'one-dark-pro',
+    lineNumbers: true,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    config: mdEnhance as any
+  },
+
   transformHead({ assets }) {
     // adjust the regex accordingly to match your font
-    const HarmonySansFile = assets.find(() => /HarmonyOS_Sans_SC\.woff2/)
+    const HarmonySansFile = assets.find(() => /.+\.woff2/)
     if (HarmonySansFile) {
       return [
         [
@@ -70,19 +86,4 @@ export default defineConfig({
       ]
     }
   },
-
-  markdown: {
-    theme: 'one-dark-pro',
-    lineNumbers: true,
-    config: mdEnhance
-  }
 })
-
-function nav() {
-  return [
-    { text: '开始之前', link: '/before/', activeMatch: '/before/' },
-    { text: '实战演练', link: '/guide/', activeMatch: '/guide/' },
-    { text: '附录', link: '/appendix/credit', activeMatch: '/appendix/' },
-    { text: 'Graia 官方文档', link: 'https://graia.cn/' }
-  ]
-}

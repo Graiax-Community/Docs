@@ -33,23 +33,18 @@ Python 满足要求，就不用单独安装 Python 了。
 而假如系统自带的 Python 版本较低或不自带 Python，那么你可以尝试在系统的软件包管理器中搜索有没有新版
 Python。
 
-::::code-group
-:::code-group-item Ubuntu
+:::code-group
 
-```bash
+```bash [Ubuntu]
 sudo apt search "python3\."
 sudo apt install python3.10
 ```
 
-:::
-:::code-group-item Arch Linux
-
-```bash
+```bash [Arch Linux]
 pacman -S python
 ```
 
 :::
-::::
 
 假如系统软件包管理器搜不到你想要的 Python 版本，那么你可以选择从源代码安装。
 

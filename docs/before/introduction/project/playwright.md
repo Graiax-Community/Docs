@@ -22,29 +22,21 @@ Playwright，并在其退出的时候自动关闭 Playwright。
 
 ## 安装
 
-::::code-group
-:::code-group-item PDM
+:::code-group
 
-```sh
+```sh [PDM]
 pdm add graiax-playwright
 ```
 
-:::
-:::code-group-item Poetry
-
-```sh
+```sh [Poetry]
 poetry add graiax-playwright
 ```
 
-:::
-:::code-group-item PIP
-
-```sh
+```sh [PIP]
 pip install graiax-playwright
 ```
 
 :::
-::::
 
 ## 开始
 

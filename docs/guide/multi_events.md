@@ -49,10 +49,9 @@ async def test(app: Ariadne, group: Group, friend: Friend, message: MessageChain
 
 但是，既然都用了 Ariadne 了，你肯定不想跟个傻子一样，通过**获取事件本身**来获取你所需要的参数，不是吗？那么就有了下面这些例子。
 
-::::code-group
-:::code-group-item Python3.8 ~ Python3.9
+:::code-group
 
-```python
+```python [Python3.8 ~ Python3.9]
 from typing import Union
 
 @channel.use(ListenerSchema(listening_events=[GroupMessage, FriendMessage]))
@@ -61,10 +60,7 @@ async def hello(app: Ariadne, sender: Union[Group, Friend], message: MessageChai
         await app.send_message(sender, MessageChain("你好，怎么了？"))
 ```
 
-:::
-:::code-group-item python3.10+
-
-```python
+```python [Python3.10+]
 @channel.use(ListenerSchema(listening_events=[GroupMessage, FriendMessage]))
 async def hello(app: Ariadne, sender: Group | Friend, message: MessageChain):
     if str(message) == "你好":
@@ -72,7 +68,6 @@ async def hello(app: Ariadne, sender: Group | Friend, message: MessageChain):
 ```
 
 :::
-::::
 
 现在，Ariadne 已经支持了如下的 `type hint`
 

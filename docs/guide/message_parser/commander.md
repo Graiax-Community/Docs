@@ -84,29 +84,21 @@ async def setu(tag: str):
 
 他可以接受下面形式的命令：
 
-::::code-group
-:::code-group-item A
+:::code-group
 
-```sh
+```sh [A]
 .涩图 pixiv A60
 ```
 
-:::
-:::code-group-item B
-
-```sh
+```sh [B]
 .涩涩 pixiv 野兽先辈
 ```
 
-:::
-:::code-group-item C
-
-```sh
+```sh [C]
 .涩涩 pixiv "野兽 先辈"
 ```
 
 :::
-::::
 
 :::tip
 对于含有空格的字符串，需要像 shell 那样使用引号包裹，否则不满足匹配规则，例如下方的文本将不会被接受

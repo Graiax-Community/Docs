@@ -171,7 +171,7 @@ export const tasklistPlugin: PluginWithOptions<TaskListOptions> = (
   { disabled = true, label = true } = {}
 ) => {
   md.core.ruler.after('inline', 'github-task-lists', (state: TaskListStateCore) => {
-    const tokens = state.tokens
+    const { tokens } = state
 
     if (!state.env.tasklists) state.env.tasklists = 0
 

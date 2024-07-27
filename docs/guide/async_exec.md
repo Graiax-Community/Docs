@@ -50,10 +50,9 @@ Graiax Text2img Playwright 会在后台常驻一个浏览器，以便在需要�
 
 ## 快速实例
 
-::::code-group
-:::code-group-item 原来的
+:::code-group
 
-```python
+```python [原来的]
 from io import BytesIO
 
 from graia.ariadne.message.element import Image
@@ -74,10 +73,7 @@ async def drawing(group: Group):
 
 ```
 
-:::
-:::code-group-item 用 io_bound
-
-```python
+```python [用 io_bound]
 from io import BytesIO
 
 from graia.ariadne.message.element import Image
@@ -99,10 +95,7 @@ async def drawing(group: Group):
     await app.send_message(group, MessageChain(Image(pic)))
 ```
 
-:::
-:::code-group-item 用 asyncio.to_thread
-
-```python
+```python [用 asyncio.to_thread]
 import asyncio
 from io import BytesIO
 
@@ -124,7 +117,6 @@ async def drawing(group: Group):
 ```
 
 :::
-::::
 
 :::tip
 `io_bound` 跟 `asyncio.to_thread()` 除了使用方法可能有所不同外，本质其实没有多大区别。

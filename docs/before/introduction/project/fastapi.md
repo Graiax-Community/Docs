@@ -18,29 +18,21 @@ Uvicorn 服务器并在 Saya 模块中便捷地注册 FastAPI 的路由，且在
 
 ## 安装
 
-::::code-group
-:::code-group-item PDM
+:::code-group
 
-```sh
+```sh [PDM]
 pdm add graiax-fastapi
 ```
 
-:::
-:::code-group-item Poetry
-
-```sh
+```sh [Poetry]
 poetry add graiax-fastapi
 ```
 
-:::
-:::code-group-item PIP
-
-```sh
+```sh [PIP]
 pip install graiax-fastapi
 ```
 
 :::
-::::
 
 ## 开始
 
