@@ -22,7 +22,7 @@
 |涩图       |<div style="background-color: #e3e3e3; width: 200px; height: 22px; border-radius: 4px"></div>|
 | v4        | [Graia Application Mirai](https://pypi.org/project/graia-application-mirai/)
 | v4+ / v4p | [Graia Ariadne](https://pypi.org/project/graia-ariadne/)
-| v5        | [Graia Avilla](https://pypi.org/project/avilla-core/)，截至 2023.01.18，还处于 WIP 状态
+| v5        | [Graia Avilla](https://pypi.org/project/avilla-core/)，截至 2024.07.27，还处于 WIP 状态
 | Kanata    | `v4` 时期使用的消息链解释器
 | MAH       | [Mirai Api Http](https://github.com/project-mirai/mirai-api-http)
 | MCL       | [Mirai Console Loader](https://github.com/iTXTech/mirai-console-loader)

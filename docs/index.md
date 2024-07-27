@@ -27,7 +27,7 @@ features:
   - title: 富有表现性
     details: 借助 Graia Framework 的各种特性，你不必懊恼于网络通信，只需要有无限的想法就能实现你想要的一切。
 
-footer: MIT Licensed | Copyright © 2022 Graia Community
+footer: MIT Licensed | Copyright © 2024 Graia Community
 ---
 
 <div class="home"><div class="container">

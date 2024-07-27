@@ -43,7 +43,7 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/GraiaCommunity/Docs' }],
     footer: {
       message: 'MIT License',
-      copyright: 'Copyright © 2022 Graia Community'
+      copyright: 'Copyright © 2024 Graia Community'
     },
     lastUpdatedText: '上次更新',
     algolia: {
