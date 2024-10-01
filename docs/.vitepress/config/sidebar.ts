@@ -129,4 +129,8 @@ const appendix = [
   }
 ]
 
-export { before, guide, appendix }
+export default {
+  '/before/': before,
+  '/guide/': guide,
+  '/appendix/': appendix
+}

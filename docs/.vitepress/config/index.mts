@@ -1,15 +1,9 @@
 import { defineConfig } from 'vitepress'
 
-import mdEnhance from './mdEnhance/index'
-import { before, guide, appendix } from './sidebar'
-function nav() {
-  return [
-    { text: '开始之前', link: '/before/', activeMatch: '/before/' },
-    { text: '实战演练', link: '/guide/', activeMatch: '/guide/' },
-    { text: '附录', link: '/appendix/credit', activeMatch: '/appendix/' },
-    { text: 'Graia 官方文档', link: 'https://graia.cn/' }
-  ]
-}
+import mdPlugin from './plugins'
+import nav from './nav'
+import sidebar from './sidebar'
+import viteConfig from './vite'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,19 +17,15 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'shortcut icon', href: '/favicon.png' }],
-    ['script', { src: 'https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js' }]
+    ['script', { src: 'https://cdn.jsdelivr.net/npm/mermaid@11.2.1/dist/mermaid.min.js' }]
   ],
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     i18nRouting: true,
     logo: '/logo.svg',
-    nav: nav(),
-    sidebar: {
-      '/before/': before,
-      '/guide/': guide,
-      '/appendix/': appendix
-    },
+    nav,
+    sidebar,
     editLink: {
       pattern: 'https://github.com/GraiaCommunity/Docs/edit/remake/docs/:path',
       text: '在 GitHub 上编辑此页'
@@ -61,11 +51,18 @@ export default defineConfig({
     returnToTopLabel: '回到顶部 ▲'
   },
 
+  vite: viteConfig,
+
   markdown: {
-    theme: 'one-dark-pro',
+    theme: {
+      light: 'min-light',
+      dark: 'one-dark-pro'
+    },
+    image: {
+      lazyLoading: true
+    },
     lineNumbers: true,
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    config: mdEnhance as any
+    config: mdPlugin
   },
 
   transformHead({ assets }) {
@@ -85,5 +82,5 @@ export default defineConfig({
         ]
       ]
     }
-  },
+  }
 })

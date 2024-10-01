@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue'
 import DefaultTheme from 'vitepress/theme'
+import { onMounted, ref } from 'vue'
 
 import NotFound from './custom404.vue'
 

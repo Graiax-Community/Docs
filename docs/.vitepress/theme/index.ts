@@ -1,10 +1,8 @@
 // https://vitepress.dev/guide/custom-theme
-import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme-without-fonts'
+import type { Theme } from 'vitepress'
 
 import Layout from './Layout.vue'
-
-import Mermaid from '../mdEnhance/components/Mermaid'
 
 import ChatFile from '../components/FakeQQ/ChatFile.vue'
 import ChatImg from '../components/FakeQQ/ChatImg.vue'
@@ -18,18 +16,20 @@ import ForwardChat from '../components/FakeQQ/ForwardChat.vue'
 import Curtain from '../components/Curtain.vue'
 import GitRepo from '../components/GitRepo.vue'
 import Loading from '../components/Loading.vue'
+import Mermaid from '../components/Mermaid'
 import MoreInfo from '../components/MoreInfo.vue'
 import ProjectInfo from '../components/ProjectInfo.vue'
 import RubyCurtain from '../components/RubyCurtain.vue'
 import VolumeBar from '../components/VolumeBar.vue'
 
-import { css } from './fonts/HarmonyOS_Sans_SC.ttf?subsets'
 import '../styles/index.scss'
+// eslint-disable-next-line
+import { css } from './fonts/HarmonyOS_Sans_SC.ttf?subsets'
 
 export default {
   extends: DefaultTheme,
   Layout,
-  enhanceApp({ app, router, siteData }) {
+  enhanceApp({ app }) {
     app.component('ChatFile', ChatFile)
     app.component('ChatImg', ChatImg)
     app.component('ChatMsg', ChatMsg)

@@ -1,6 +1,0 @@
-node_modules/
-.temp/
-.cache/
-lib/
-dist/
-!.vitepress/

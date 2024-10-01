@@ -38,8 +38,8 @@ withDefaults(defineProps<Props>(), {
         <div class="user-name text-ellipsis">
           <span class="text-ellipsis">{{ name }}</span>
           <div
-            class="q-tag member-role-tag"
             v-if="tag"
+            class="q-tag member-role-tag"
             :style="{ backgroundColor: tagBgColor, color: tagColor }"
           >
             {{ tag }}

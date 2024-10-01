@@ -31,18 +31,10 @@
  */
 
 import type { PluginSimple } from 'markdown-it'
-import type Renderer from 'markdown-it/lib/renderer.js'
-import { zlibSync, strToU8, strFromU8 } from 'fflate'
+import type { RenderRule } from 'markdown-it/lib/renderer.mjs'
 
-function utoa(data: string): string {
-  const buffer = strToU8(data)
-  const zipped = zlibSync(buffer, { level: 9 })
-  const binary = strFromU8(zipped, true)
-  return btoa(binary)
-}
-
-const mermaidRenderer: Renderer.RenderRule = (tokens, index) =>
-  `<Mermaid id="mermaid-${index}" code="${utoa(tokens[index].content)}"></Mermaid>`
+const mermaidRenderer: RenderRule = (tokens, index) =>
+  `<Mermaid id="mermaid-${index}" code="${tokens[index].content}"></Mermaid>`
 
 interface MermaidOptions {
   content: string
@@ -73,7 +65,7 @@ ${diagram}
 `
 }\
 ${
-  diagram === 'mermaid'
+  diagram === 'mermaid' || diagram === 'sankey-beta'
     ? content
     : content
         .split('\n')
@@ -83,9 +75,12 @@ ${
 `
 
 const getMermaid = (options: MermaidOptions, index: number): string =>
-  `<Mermaid id="mermaid-${index}" code="${utoa(getMermaidContent(options))}"></Mermaid>`
+  `<Mermaid id="mermaid-${index}" code="${getMermaidContent(options)}"${
+    options.title ? ` title="${options.title}"` : ''
+  }></Mermaid>`
 
 const DIAGRAM_MAP: Record<string, string> = {
+  'block': 'block-beta',
   'class': 'classDiagram',
   'c4c': 'C4Context',
   'er': 'erDiagram',
@@ -94,9 +89,13 @@ const DIAGRAM_MAP: Record<string, string> = {
   'journey': 'journey',
   'mindmap': 'mindmap',
   'pie': 'pie',
+  'quadrant': 'quadrantChart',
+  'requirement': 'requirementDiagram',
+  'sankey': 'sankey-beta',
   'sequence': 'sequenceDiagram',
   'state': 'stateDiagram-v2',
-  'timeline': 'timeline'
+  'timeline': 'timeline',
+  'xy': 'xychart-beta'
 }
 
 export const mermaidPlugin: PluginSimple = (md) => {
@@ -119,7 +118,6 @@ export const mermaidPlugin: PluginSimple = (md) => {
       return getMermaid({ diagram: DIAGRAM_MAP[name], title: rest.join(' '), content }, index)
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
     return fence!(...args)
   }
 
