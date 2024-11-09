@@ -1,8 +1,8 @@
-@import './container.scss';
-@import './code-group.scss';
-@import './mermaid.scss';
-@import './tasklist.scss';
-@import './heimu.scss';
+@use './container.scss';
+@use './code-group.scss';
+@use './mermaid.scss';
+@use './tasklist.scss';
+@use './heimu.scss';
 
 html {
   scroll-behavior: smooth;
@@ -125,7 +125,9 @@ html.dark {
 
 // 滑稽表情
 .face {
-  display: inline;
-  height: 20px;
-  vertical-align: text-bottom;
+  display: inline !important;
+  height: 20px !important;
+  width: initial !important;
+  margin: 0 !important;
+  vertical-align: text-bottom !important;
 }
