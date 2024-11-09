@@ -30,7 +30,7 @@
  *
  */
 
-import { IconBase } from '../plugins/utils/IconBase'
+import { IconBase } from './utils/IconBase'
 import { h } from 'vue'
 
 import type { FunctionalComponent } from 'vue'
