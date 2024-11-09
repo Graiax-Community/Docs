@@ -2,6 +2,7 @@ import Font from 'vite-plugin-font'
 import { defineConfig } from 'vite'
 import externalGlobals from 'rollup-plugin-external-globals'
 import viteCompression from 'vite-plugin-compression'
+import { URL, fileURLToPath } from 'node:url'
 
 // https://cn.vitejs.dev/config/
 export default defineConfig({
@@ -30,6 +31,11 @@ export default defineConfig({
       ext: '.br'
     })
   ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('../../.vitepress', import.meta.url))
+    }
+  },
   build: {
     rollupOptions: {
       external: ['mermaid'],
@@ -42,8 +48,5 @@ export default defineConfig({
         api: 'modern-compiler'
       }
     }
-  },
-  server: {
-    host: '0.0.0.0'
   }
 })

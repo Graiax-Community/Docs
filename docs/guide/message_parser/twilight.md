@@ -601,21 +601,21 @@ async def reply(..., arg: MessageChain = ResultValue()):  # 保证不会被正�
 
 因为太懒了，不想写，就直接放原文吧~
 
-<chat-window title="Graia Framework Community">
-  <chat-toast>2022/6/10 星期五 下午 8:48:46</chat-toast>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">记得提一下 ForceResult</chat-msg>
-  <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" onright><chat-quote name="群菜鸮">记得提一下 ForceResult</chat-quote>啊？这是什么</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">你不是说有 if xx.matched 没有类型保证吗</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">我弄了个有类型保证的（</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">当然前提是 matched</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">arg: ForceResult[MessageChain]</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">然后 arg.result 就不是 Optional[MessageChain] 了</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">是 MessageChain</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">相当于帮你走了一遍 typing.cast</chat-msg>
-  <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" onright>那这个和 ResultValue 哪个更优捏</chat-msg>
-  <chat-toast>提示：下面这个问题已修复</chat-toast>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">草，我ResultValue好像写炸了<br />ForceResult倒是没问题</chat-msg>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-tip is-time>2022/6/10 星期五 下午 8:48:46</q-tip>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">记得提一下 ForceResult</q-text>
+  <q-text name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" self><chat-quote name="群菜鸮">记得提一下 ForceResult</chat-quote>啊？这是什么</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">你不是说有 if xx.matched 没有类型保证吗</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">我弄了个有类型保证的（</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">当然前提是 matched</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">arg: ForceResult[MessageChain]</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">然后 arg.result 就不是 Optional[MessageChain] 了</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">是 MessageChain</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">相当于帮你走了一遍 typing.cast</q-text>
+  <q-text name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" self>那这个和 ResultValue 哪个更优捏</q-text>
+  <q-tip>提示：下面这个问题已修复</q-tip>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">草，我ResultValue好像写炸了<br />ForceResult倒是没问题</q-text>
+</q-window>
 
 :::interlink
 <https://graia.cn/ariadne/feature/twilight/>

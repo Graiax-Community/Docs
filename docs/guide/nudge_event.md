@@ -60,10 +60,10 @@ async def getup(app: Ariadne, event: NudgeEvent):
 
 此时运行机器人，然后在群里戳一下他，你就会得到如下结果
 
-<chat-window title="Graia Framework Community">
-  <chat-toast>GraiaX 👉 戳了戳 EroEroBot 的腰</chat-toast>
-  <chat-msg name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp">你不要光天化日之下在这里戳我啊</chat-msg>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-tip>GraiaX 👉 戳了戳 EroEroBot 的腰</q-tip>
+  <q-text is-bot name="EroEroBot"avatar="/avatar/ero.webp">你不要光天化日之下在这里戳我啊喂！</q-text>
+</q-window>
 
 :::tip
 有关什么是 Broadcast，各种 Event 又是什么，请参阅[这里](/before/QA.html#_3-什么是-broadcastcontrol)

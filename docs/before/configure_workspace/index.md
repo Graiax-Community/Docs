@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import review from '@/chat/before/configure_workspace/review.vue'
+</script>
+
 # 从零开始的 Python 环境及 IDE 的配置
 
 看这个文档的很多人可能是第一次接触 Python，或者第一次写一个完整的 Python 项目，
@@ -13,19 +17,7 @@
 
 :::
 
-<chat-window title="Graia Framework Community">
-   <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" onright>魔女 review 一下文档？</chat-msg>
-   <chat-toast>Ten minutes later...</chat-toast>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">去世了</chat-msg>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">我难以吐槽了</chat-msg>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">你们不看看scoop吗</chat-msg>
-   <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640" onright><a href="https://scoop.sh/">这个吗</a></chat-msg>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">
-    <chat-quote name="群菜狗">这个吗</chat-quote>没有国际网络不太好用
-  </chat-msg>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">有的话</chat-msg>
-   <chat-msg name="GreyElaina" avatar="http://q1.qlogo.cn/g?b=qq&nk=1846913566&s=640">我XX杀杀杀</chat-msg>
-</chat-window>
+<review />
 
 :::danger 请注意
 

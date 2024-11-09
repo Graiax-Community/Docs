@@ -13,20 +13,19 @@
 
 众所周知，QQ 因为某种原因，是不能出现那种很涩的图片的，
 不过呢，我们可以通过一些奇奇怪怪的方法来绕过这些限制。
-比如说，群文件<img src="/images/guide/wangwang.webp" class="face">。
+比如说，群文件<img src="/images/guide/wangwang.webp" alt="[滑稽]" class="face">。
 
-<chat-window title="Graia Framework Community">
-    <chat-msg name="GraiaX" onright>来一打紧身衣涩图</chat-msg>
-    <chat-msg name="GraiaX">
-        <chat-file
-            name="EroEroBot"
-            filename="secret.zip"
-            filesize="6.33MB"
-            fileicon="/images/guide/compressed_file.webp"
-            href="https://www.bilibili.com/video/BV1GJ411x7h7"
-        />
-    </chat-msg>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-text name="GraiaX" self>来一打紧身衣涩图</q-text>
+  <q-file
+    is-bot
+    name="EroEroBot"
+    file-name="secret.zip"
+    file-size="6.33MB"
+    file-src="https://www.bilibili.com/video/BV1GJ411x7h7"
+    icon-src="/images/guide/compressed_file.webp"
+  ></q-file>
+</q-window>
 
 斯巴拉西，这是什么梦寐以求的功能啊！那就让我们赶快进入今天的涩涩创想吧！
 

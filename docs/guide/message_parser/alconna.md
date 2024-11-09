@@ -144,7 +144,7 @@ async def ero_ascii2d(
 
 准备就绪，对着你的机器人~~发情~~发号施令吧：
 
-<chat-window title="聊天记录">
+<q-window title="聊天记录">
   <chat-msg name="群菜鸮" avatar="https://q4.qlogo.cn/g?b=qq&nk=2948531755&s=640">
     setu搜索<br />
     <img alt="涩图" style="margin-top: 5px" src="/images/guide/ero_pic_1.webp"/>
@@ -154,7 +154,7 @@ async def ero_ascii2d(
   <chat-msg name="群菜龙" avatar="https://q4.qlogo.cn/g?b=qq&nk=2544704967&s=640">草</chat-msg>
   <chat-msg name="群菜鸡" avatar="https://q4.qlogo.cn/g?b=qq&nk=1450069615&s=640">草</chat-msg>
   <chat-msg name="群菜鸮" avatar="https://q4.qlogo.cn/g?b=qq&nk=2948531755&s=640">草</chat-msg>
-</chat-window>
+</q-window>
 
 ## [直面灾厄](https://zh.moegirl.org.cn/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F/%E9%9B%86%E6%88%90%E6%88%98%E7%95%A5/%E5%82%80%E5%BD%B1%E4%B8%8E%E7%8C%A9%E7%BA%A2%E5%AD%A4%E9%92%BB#%E9%9A%BE%E5%BA%A6%E5%88%86%E7%BA%A7)
 
@@ -470,7 +470,7 @@ manager.add_service(AlconnaGraiaService("ariadne"))
 
 例如，当上例的 `send_flag` 为 `reply` 时，可以出现如下情况：
 
-<chat-window title="聊天记录">
+<q-window title="聊天记录">
   <chat-msg name="群菜鸮" avatar="https://q4.qlogo.cn/g?b=qq&nk=2948531755&s=640">setu搜索 --help</chat-msg>
   <chat-msg name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp">setu搜索 &lt;content:Image|url&gt;<br />
   依据输入的图片寻找可能的原始图片来源<br />
@@ -489,7 +489,7 @@ manager.add_service(AlconnaGraiaService("ariadne"))
    setu搜索 [图片]<br />
   </chat-msg>
   <chat-msg name="群菜龙" avatar="https://q4.qlogo.cn/g?b=qq&nk=2544704967&s=640">好</chat-msg>
-</chat-window>
+</q-window>
 
 `comp_session` 主要配置关于补全会话的相关参数：
 
@@ -1661,7 +1661,7 @@ async def _(app: Ariadne, codes: Match[list]):
 
 这样便可以进行如下操作：
 
-<chat-window title="聊天记录">
+<q-window title="聊天记录">
   <chat-msg name="RF" avatar="https://q4.qlogo.cn/g?b=qq&nk=3165388245&s=640">run<br />
   import sys<br />
   print(sys.version_info)<br />
@@ -1669,7 +1669,7 @@ async def _(app: Ariadne, codes: Match[list]):
   <chat-msg name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp">sys.version_info(major=3, minor=8, micro=6, releaselevel='final', serial=0)</chat-msg>
   <chat-msg name="群菜鸡" avatar="https://q4.qlogo.cn/g?b=qq&nk=1450069615&s=640">怎么是3.8（</chat-msg>
   <chat-msg name="群菜龙" avatar="https://q4.qlogo.cn/g?b=qq&nk=2544704967&s=640">怎么是3.8（</chat-msg>
-</chat-window>
+</q-window>
 
 ### 减少 Option 的使用
 

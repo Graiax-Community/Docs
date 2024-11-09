@@ -120,20 +120,20 @@ async def test(app: Ariadne, message: MessageChain):
 
 这确实成功了，可是当你满怀激动的将你的 bot 给群友用了之后，却是这样的局面：
 
-<chat-window title="Graia Framework Community">
-  <chat-toast>下午 3:38</chat-toast>
-  <chat-msg name="群菜鸮" avatar="http://q1.qlogo.cn/g?b=qq&nk=2948531755&s=640">涩图来</chat-msg>
-  <chat-img name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_1.webp"></chat-img>
-  <chat-msg name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640">涩图来</chat-msg>
-  <chat-msg name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640">？我涩图呢</chat-msg>
-  <chat-msg name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640"><a>@GraiaX</a> 我涩图呢</chat-msg>
-  <chat-msg name="GraiaX" onright>涩图来</chat-msg>
-  <chat-msg name="GraiaX" onright>az?</chat-msg>
-  <chat-toast>下午 3:40</chat-toast>
-  <chat-img name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_2.webp"></chat-img>
-  <chat-toast>下午 3:42</chat-toast>
-  <chat-img name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_3.webp"></chat-img>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-tip is-time>下午 3:38</q-tip is-time>
+  <q-text name="群菜鸮" avatar="http://q1.qlogo.cn/g?b=qq&nk=2948531755&s=640">涩图来</q-text>
+  <q-image is-bot name="EroEroBot" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_1.webp"></q-image  >
+  <q-text name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640">涩图来</q-text>
+  <q-text name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640">？我涩图呢</q-text>
+  <q-text name="群菜鸡" avatar="http://q1.qlogo.cn/g?b=qq&nk=1450069615&s=640"><a>@GraiaX</a> 我涩图呢</q-text>
+  <q-text name="GraiaX" self>涩图来</q-text>
+  <q-text name="GraiaX" self>az?</q-text>
+  <q-tip is-time>下午 3:40</q-tip is-time>
+  <q-image is-bot name="EroEroBot" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_2.webp"></q-image  >
+  <q-tip is-time>下午 3:42</q-tip is-time>
+  <q-image is-bot name="EroEroBot" avatar="/avatar/ero.webp" src="/images/guide/ero_pic_3.webp"></q-image  >
+</q-window>
 
 你可以猜一下是什么原因吗？
 

@@ -1,18 +1,24 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const volume = ref(100)
+</script>
+
 # 哦嗨哟，欧尼酱
 
 想必每一个二刺螈都曾今都会幻想过 —— 每天早上**女仆/只存在于美好幻想的可爱妹妹**叫你起床。
 
 然后，自从你学习了如何写出一个机器人，就想能不能通过机器人脚本来间接实现这个幻想呢？
 
-<volume-bar>懂得都懂：</volume-bar>
+<volume-bar v-model="volume">懂得都懂：</volume-bar>
 
-<chat-window title="Graia Framework Community">
-  <chat-toast>上午 07:30</chat-toast>
-  <chat-msg name="Hanser" avatar="/avatar/hanser.webp"><a style="text-decoration: none">@GraiaX</a> おはよう</chat-msg>
-  <chat-voice name="Hanser" avatar="/avatar/hanser.webp" audio-src="/voices/欧尼酱快起床.m4a"></chat-voice>
-  <chat-toast>上午 11:30</chat-toast>
-  <chat-msg name="GraiaX" onright>哦嗨哟</chat-msg>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-tip>上午 07:30</q-tip>
+  <q-text name="Hanser" avatar="/avatar/hanser.webp"><a style="text-decoration: none">@GraiaX</a> おはよう</q-text>
+  <q-voice name="Hanser" avatar="/avatar/hanser.webp" src="/voices/欧尼酱快起床.m4a" :volume="volume"></q-voice>
+  <q-tip>上午 11:30</q-tip>
+  <q-text name="GraiaX" self>哦嗨哟</q-text>
+</q-window>
 
 :::tip
 你可能会问上面这位叫你起床的是谁，  
@@ -108,11 +114,11 @@ async def every_minute_speaking(app: Ariadne):
 
 :::
 
-<chat-window title="Graia Framework Community">
-  <chat-toast>上午 07:30</chat-toast>
-  <chat-msg name="Hanser" avatar="/avatar/hanser.webp"><a style="text-decoration: none">@GraiaX</a></chat-msg>
-  <chat-voice name="Hanser" avatar="/avatar/hanser.webp" audio-src="/voices/起床搬砖辣.m4a"></chat-voice>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-tip is-time>上午 07:30</q-tip>
+  <q-text name="Hanser" avatar="/avatar/hanser.webp"><a style="text-decoration: none">@GraiaX</a></q-text>
+  <q-voice name="Hanser" avatar="/avatar/hanser.webp" src="/voices/起床搬砖辣.m4a" :volume="volume"></q-voice>
+</q-window>
 
 :::interlink
 <https://graia.cn/ariadne/extra/scheduler/>

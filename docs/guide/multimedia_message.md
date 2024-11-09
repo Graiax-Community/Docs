@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const volume = ref(100)
+</script>
+
 # 八嘎 hentai 无路赛
 
 [>_<]: 因为不知道怎么样才能把script写在md里面，没办法只能用';'来硬生生把代码连起来了
@@ -22,12 +28,20 @@
 
 虽然有点突然，但你是否有想过机器人能够对你[钉宫三连](https://zh.moegirl.org.cn/%E9%92%89%E5%AE%AB%E7%90%86%E6%83%A0)呢？
 
-<chat-window title="Graia Framework Community">
-  <chat-msg name="GraiaX" onright>无路赛</chat-msg>
-  <chat-voice name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp" audio-src="/voices/夏娜_无路赛_钉宫理惠.m4a">别戳我，好痒</chat-voice>
-</chat-window>
+<q-window title="Graia Framework Community">
+  <q-text name="GraiaX" self>无路赛</q-text>
+  <q-voice
+    is-bot
+    name="EroEroBot"
+    avatar="/avatar/ero.webp"
+    src="/voices/夏娜_无路赛_钉宫理惠.m4a"
+    :volume="volume"
+  >
+    别戳我，好痒
+  </q-voice>
+</q-window>
 
-<volume-bar>贴心的音量条：</volume-bar>
+<volume-bar v-model=volume>贴心的音量条：</volume-bar>
 
 还记得上一节我们简单的讲解消息链时候，给出了这样一种构建图片元素的办法：
 

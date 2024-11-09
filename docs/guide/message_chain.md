@@ -129,20 +129,29 @@ True
 事实上，`message.display` 跟 `str(message)` 是一样的。  
 至于要选哪一个呢？ <curtain>到底要选哪个呢</curtain>
 
-<chat-window title="Graia Framework Community">
-  <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640">
-    <chat-window title="Graia Framework Community">
-      <chat-msg name="GraiaX">现在是推荐 message.display 还是 str(message) 啊</chat-msg>
-      <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">看你 xp</chat-msg>
-    </chat-window>
-  </chat-msg>
-  <chat-msg name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640">草哈哈哈哈</chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">
+<q-window title="Graia Framework Community">
+  <q-text name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640">
+    <q-window>
+      <q-text name="GraiaX">
+        现在是推荐
+        <code>message.display</code>
+        还是
+        <code>str(message)</code>
+        啊
+      </q-text>
+      <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">看你 xp</q-text>
+    </q-window>
+  </q-text>
+  <q-text name="群菜狗" avatar="http://q1.qlogo.cn/g?b=qq&nk=731347477&s=640">草哈哈哈哈</q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">
     <chat-quote name="群菜狗">草哈哈哈哈</chat-quote>改了
-  </chat-msg>
-  <chat-msg name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">现在是推 str(msg_chain)</chat-msg>
-  <chat-msg name="GraiaX">传下去，群菜块要一统XP<curtain>什么秦始皇</curtain></chat-msg>
-</chat-window>
+  </q-text>
+  <q-text name="群菜块" avatar="http://q1.qlogo.cn/g?b=qq&nk=2907489501&s=640">
+    现在是推
+    <code>str(msg_chain)</code>
+  </q-text>
+  <q-text name="GraiaX">传下去，群菜块要一统XP<curtain>什么秦始皇</curtain></q-text>
+</q-window>
 
 :::
 

@@ -28,12 +28,15 @@
 
 你的目标：
 
-<chat-window>
-  <chat-msg name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp">来点涩图<img
-    src="/images/guide/wangwang.webp" alt="Doge"
-    class="face"
-  /></chat-msg>
-</chat-window>
+<q-window>
+  <q-text is-bot name="EroEroBot" avatar="/avatar/ero.webp">
+    来点涩图
+    <img
+      src="/images/guide/wangwang.webp" alt="Doge"
+      class="face"
+    />
+  </q-text>
+</q-window>
 
 你的构造：
 
@@ -43,13 +46,13 @@ MessageChain("来点涩图", Face(277))
 
 这还算比较好的，但要是你想做到下面的效果呢？
 
-<chat-window>
-  <chat-msg name="EroEroBot" tag="机器人" avatar="/avatar/ero.webp">
+<q-window>
+  <q-text is-bot name="EroEroBot" avatar="/avatar/ero.webp">
     在新的一年里，祝你<br />
     身<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />体<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />健<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />康<br/>
     万<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />事<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />如<img src="/images/guide/wangwang.webp" alt="Doge" class="face" />意
-  </chat-msg>
-</chat-window>
+  </q-text>
+</q-window>
 
 你的构造：
 
