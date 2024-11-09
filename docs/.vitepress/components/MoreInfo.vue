@@ -3,7 +3,7 @@
 <script setup lang="ts">
 interface Props {
   words: string
-  link: string
+  link?: string
   width?: string
 }
 

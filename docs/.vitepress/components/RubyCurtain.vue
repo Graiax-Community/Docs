@@ -4,7 +4,7 @@
 interface Props {
   up: string
   title?: string
-  type: string
+  type?: string
 }
 
 withDefaults(defineProps<Props>(), {
