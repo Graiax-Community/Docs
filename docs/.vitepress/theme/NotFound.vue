@@ -1,5 +1,3 @@
-<script lang="ts" setup></script>
-
 <template>
   <div class="not-found">
     <p class="code">🤔</p>
