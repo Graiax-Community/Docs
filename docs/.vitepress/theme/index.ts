@@ -1,8 +1,10 @@
 // https://vitepress.dev/guide/custom-theme
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import type { Theme } from 'vitepress'
+import { h } from 'vue'
 
-import Layout from './Layout.vue'
+import DocAfter from './DocAfter.vue'
+import NotFound from './NotFound.vue'
 
 import { FakeQQUI } from 'fake-qq-ui'
 
@@ -25,7 +27,12 @@ import './fonts/HarmonyOS_Sans_SC.ttf?subsets'
 
 export default {
   extends: DefaultTheme,
-  Layout,
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      'doc-after': () => h(DocAfter),
+      'not-found': () => h(NotFound)
+    })
+  },
   enhanceApp({ app }) {
     app.component('Curtain', Curtain)
     app.component('GitRepo', GitRepo)
