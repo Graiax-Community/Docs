@@ -48,7 +48,41 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 </script>
 
 <template>
-  <DefaultTheme.Layout />
+  <DefaultTheme.Layout>
+    <template #doc-top><slot name="doc-top"></slot></template>
+    <template #doc-bottom><slot name="doc-bottom"></slot></template>
+    <template #doc-footer-before><slot name="doc-footer-before"></slot></template>
+    <template #doc-before><slot name="doc-before"></slot></template>
+    <template #doc-after><slot name="doc-after"></slot></template>
+    <template #sidebar-nav-before><slot name="sidebar-nav-before"></slot></template>
+    <template #sidebar-nav-after><slot name="sidebar-nav-after"></slot></template>
+    <template #aside-top><slot name="aside-top"></slot></template>
+    <template #aside-bottom><slot name="aside-bottom"></slot></template>
+    <template #aside-outline-before><slot name="aside-outline-before"></slot></template>
+    <template #aside-outline-after><slot name="aside-outline-after"></slot></template>
+    <template #aside-ads-before><slot name="aside-ads-before"></slot></template>
+    <template #aside-ads-after><slot name="aside-ads-after"></slot></template>
+    <template #home-hero-before><slot name="home-hero-before"></slot></template>
+    <template #home-hero-info-before><slot name="home-hero-info-before"></slot></template>
+    <template #home-hero-info><slot name="home-hero-info"></slot></template>
+    <template #home-hero-info-after><slot name="home-hero-info-after"></slot></template>
+    <template #home-hero-actions-after><slot name="home-hero-actions-after"></slot></template>
+    <template #home-hero-image><slot name="home-hero-image"></slot></template>
+    <template #home-hero-after><slot name="home-hero-after"></slot></template>
+    <template #home-features-before><slot name="home-features-before"></slot></template>
+    <template #home-features-after><slot name="home-features-after"></slot></template>
+    <template #page-top><slot name="page-top"></slot></template>
+    <template #page-bottom><slot name="page-bottom"></slot></template>
+    <template #not-found><slot name="not-found"></slot></template>
+    <template #layout-top><slot name="layout-top"></slot></template>
+    <template #layout-bottom><slot name="layout-bottom"></slot></template>
+    <template #nav-bar-title-before><slot name="nav-bar-title-before"></slot></template>
+    <template #nav-bar-title-after><slot name="nav-bar-title-after"></slot></template>
+    <template #nav-bar-content-before><slot name="nav-bar-content-before"></slot></template>
+    <template #nav-bar-content-after><slot name="nav-bar-content-after"></slot></template>
+    <template #nav-screen-content-before><slot name="nav-screen-content-before"></slot></template>
+    <template #nav-screen-content-after><slot name="nav-screen-content-after"></slot></template>
+  </DefaultTheme.Layout>
   <div id="get-status-bar-height" ref="getStatusBarHeightRef"></div>
 </template>
 
