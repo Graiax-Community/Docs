@@ -13,10 +13,10 @@ hero:
 
   actions:
     - theme: brand
-      text: 让我们开始吧
+      text: 🚀让我们开始吧
       link: /before/
     - theme: alt
-      text: Graia 官方文档
+      text: 🔗Graia 官方文档
       link: https://graia.cn
 
 features:

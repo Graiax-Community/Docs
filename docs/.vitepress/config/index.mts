@@ -47,8 +47,11 @@ export default defineConfig({
       next: '下一页'
     },
     darkModeSwitchLabel: '黑暗模式',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到黑暗模式',
     sidebarMenuLabel: '目录',
-    returnToTopLabel: '回到顶部 ▲'
+    returnToTopLabel: '回到顶部 ▲',
+    externalLinkIcon: true
   },
 
   vite: viteConfig,
