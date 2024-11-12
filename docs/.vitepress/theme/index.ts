@@ -4,6 +4,7 @@ import type { Theme } from 'vitepress'
 import { h } from 'vue'
 
 import DocAfter from './DocAfter.vue'
+import Layout from './Layout.vue'
 import NotFound from './NotFound.vue'
 
 import { FakeQQUI } from 'fake-qq-ui'
@@ -28,7 +29,7 @@ import './fonts/HarmonyOS_Sans_SC.ttf?subsets'
 export default {
   extends: DefaultTheme,
   Layout() {
-    return h(DefaultTheme.Layout, null, {
+    return h(Layout, null, {
       'doc-after': () => h(DocAfter),
       'not-found': () => h(NotFound)
     })
