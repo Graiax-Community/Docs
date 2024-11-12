@@ -62,10 +62,14 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 .VPSwitchAppearance {
   width: 22px !important;
-  background-color: initial !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .VPSwitchAppearance .check {
   transform: none !important;
+  position: initial;
+  box-shadow: initial;
 }
 </style>
