@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import { useData } from 'vitepress'
-import { nextTick, provide } from 'vue'
+import { nextTick, provide, ref } from 'vue'
+import { useElementSize, useWindowSize } from '@vueuse/core'
+
+const getStatusBarHeightRef = ref<HTMLDivElement>()
+const { height: windowHeight } = useWindowSize()
+const { height: viewHeight } = useElementSize(getStatusBarHeightRef)
 
 const { isDark } = useData()
 
@@ -15,11 +20,14 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     return
   }
 
+  // 用于计算状态栏高度，不加的话在 Android 端 Chrome 和 Edge 动画会错位，Via 浏览器和 PC 端无影响
+  const statusBarHeight = viewHeight.value - windowHeight.value
+
   const clipPath = [
-    `circle(0px at ${x}px ${y}px)`,
+    `circle(0px at ${x}px ${y + statusBarHeight}px)`,
     `circle(${Math.hypot(
       Math.max(x, innerWidth - x),
-      Math.max(y, innerHeight - y)
+      Math.max(y + statusBarHeight, innerHeight - y - statusBarHeight)
     )}px at ${x}px ${y}px)`
   ]
 
@@ -41,9 +49,19 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
 
 <template>
   <DefaultTheme.Layout />
+  <div id="get-status-bar-height" ref="getStatusBarHeightRef"></div>
 </template>
 
 <style>
+#get-status-bar-height {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: -999;
+  width: 100vw;
+  height: 100vh;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;
