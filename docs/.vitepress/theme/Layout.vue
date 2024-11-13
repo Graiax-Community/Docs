@@ -28,7 +28,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     `circle(0px at ${x}px ${y + statusBarHeight}px)`,
     `circle(${Math.hypot(
       Math.max(x, innerWidth - x),
-      Math.max(y + statusBarHeight, innerHeight - y - statusBarHeight)
+      Math.max(y + statusBarHeight, innerHeight - y + statusBarHeight)
     )}px at ${x}px ${y}px)`
   ]
 
@@ -41,7 +41,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     { clipPath: isDark.value ? clipPath.reverse() : clipPath },
     {
       duration: 300,
-      easing: 'ease-in',
+      easing: 'cubic-bezier(0.55, 0.06, 0.68, 0.19)',
       pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
     }
   )
