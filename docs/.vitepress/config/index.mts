@@ -27,7 +27,7 @@ export default defineConfig({
     nav,
     sidebar,
     editLink: {
-      pattern: 'https://github.com/GraiaCommunity/Docs/edit/remake/docs/:path',
+      pattern: 'https://github.com/GraiaCommunity/Docs/edit/vitepress/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
     socialLinks: [{ icon: 'github', link: 'https://github.com/GraiaCommunity/Docs' }],
